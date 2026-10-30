@@ -1,0 +1,270 @@
+
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Skyline — сучасний демонстраційний каталог нерухомості.">
+    <title>Skyline — простір для життя</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+    <script src="/app.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrap nav">
+            <a class="brand" href="#top" aria-label="Skyline — на головну">
+                <span class="brand-mark">⌂</span>
+                <span>skyline<span class="brand-dot">.</span></span>
+            </a>
+
+            <nav class="nav-links" aria-label="Основна навігація">
+                <a href="#catalog">Каталог</a>
+                <a href="#benefits">Переваги</a>
+                <a href="#about">Про нас</a>
+            </nav>
+
+            <a class="nav-cta" href="#catalog">
+                Знайти житло <span>↗</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Відкрити меню"
+                aria-expanded="false"
+            >☰</button>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div
+                class="hero-photo"
+                role="img"
+                aria-label="Сучасний житловий будинок на тлі міста"
+            ></div>
+
+            <div class="hero-gradient"></div>
+
+            <div class="wrap hero-inner">
+                <div class="hero-copy">
+                    <span class="eyebrow light">
+                        <span class="eyebrow-dot"></span>
+                        ПРОСТІР ДЛЯ ЖИТТЯ
+                    </span>
+
+                    <h1>
+                        Знайдіть місце,<br>
+                        яке стане <em>домом.</em>
+                    </h1>
+
+                    <p>
+                        Продумані простори, чесні деталі та житло,
+                        у яке хочеться повертатися щодня.
+                    </p>
+
+                    <a href="#catalog" class="hero-button">
+                        Дивитися об’єкти <span>↗</span>
+                    </a>
+                </div>
+
+                <div class="hero-bottom">
+                    <div>
+                        <strong>06</strong>
+                        <span>демооб’єктів</span>
+                    </div>
+
+                    <div class="hero-separator"></div>
+
+                    <div>
+                        <strong>03</strong>
+                        <span>типи житла</span>
+                    </div>
+
+                    <span class="hero-scroll">
+                        Гортайте вниз <span>↓</span>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro wrap" id="catalog">
+            <div class="section-top">
+                <div>
+                    <span class="eyebrow dark">01 / КАТАЛОГ</span>
+
+                    <h2>
+                        Простір, що<br>
+                        <em>відгукується вам.</em>
+                    </h2>
+                </div>
+
+                <p>
+                    Від затишної студії до будинку з садом —
+                    знайдіть свій наступний дім серед підібраних варіантів.
+                </p>
+            </div>
+
+            <div class="filters">
+                <label class="search-wrap">
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        id="search"
+                        type="search"
+                        placeholder="Місто, район або назва..."
+                        aria-label="Пошук нерухомості"
+                    >
+                </label>
+
+                <label class="field">
+                    <span>ТИП НЕРУХОМОСТІ</span>
+
+                    <select id="type">
+                        <option value="all">Усі типи</option>
+                        <option value="apartment">Квартири</option>
+                        <option value="studio">Студії</option>
+                        <option value="house">Будинки</option>
+                    </select>
+                </label>
+
+                <label class="field">
+                    <span>СОРТУВАННЯ</span>
+
+                    <select id="sort">
+                        <option value="featured">Рекомендовані</option>
+                        <option value="price_asc">Спочатку дешевші</option>
+                        <option value="price_desc">Спочатку дорожчі</option>
+                        <option value="area_desc">Найбільша площа</option>
+                    </select>
+                </label>
+
+                <button id="reset" class="reset">
+                    ↺ <span>Скинути</span>
+                </button>
+            </div>
+
+            <div class="catalog-meta">
+                <p id="resultCount" aria-live="polite">
+                    Завантажуємо об’єкти…
+                </p>
+
+                <span>SKYLINE COLLECTION — 2026</span>
+            </div>
+
+            <div id="grid" class="property-grid" aria-live="polite">
+                <p class="message">Завантаження каталогу…</p>
+            </div>
+        </section>
+
+        <section class="benefits" id="benefits">
+            <div class="wrap">
+                <div class="section-top">
+                    <div>
+                        <span class="eyebrow dark">02 / НАШ ПІДХІД</span>
+
+                        <h2>
+                            Вибирайте з<br>
+                            <em>впевненістю.</em>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Ми залишаємо тільки потрібне: зрозумілий каталог,
+                        ключові параметри та можливість легко порівняти варіанти.
+                    </p>
+                </div>
+
+                <div class="benefit-grid">
+                    <article>
+                        <span class="benefit-num">01</span>
+                        <div class="benefit-icon">⌁</div>
+                        <h3>Тільки важливе</h3>
+                        <p>
+                            Ціна, метраж, кімнати й розташування —
+                            усе на одній картці.
+                        </p>
+                    </article>
+
+                    <article>
+                        <span class="benefit-num">02</span>
+                        <div class="benefit-icon">◎</div>
+                        <h3>Зручний пошук</h3>
+                        <p>
+                            Шукайте за містом і районом,
+                            фільтруйте за типом та сортуйте.
+                        </p>
+                    </article>
+
+                    <article>
+                        <span class="benefit-num">03</span>
+                        <div class="benefit-icon">◇</div>
+                        <h3>Власні фаворити</h3>
+                        <p>
+                            Зберігайте цікаві об’єкти в обраному
+                            прямо у браузері.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about wrap" id="about">
+            <div
+                class="about-image"
+                role="img"
+                aria-label="Світлий сучасний інтер’єр"
+            ></div>
+
+            <div class="about-copy">
+                <span class="eyebrow dark">03 / ПРО ПРОЄКТ</span>
+
+                <h2>
+                    Більше ніж<br>
+                    <em>квадратні метри.</em>
+                </h2>
+
+                <p>
+                    Skyline — демонстраційний вебпроєкт для портфоліо.
+                    Усі об’єкти, ціни та описи вигадані й слугують
+                    прикладом роботи каталогу.
+                </p>
+
+                <a class="text-link" href="#catalog">
+                    Переглянути каталог <span>↗</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <a class="brand" href="#top">
+                <span class="brand-mark">⌂</span>
+                <span>skyline<span class="brand-dot">.</span></span>
+            </a>
+
+            <span>Зроблено з увагою до деталей.</span>
+            <span>© 2026 Skyline · Portfolio demo</span>
+        </div>
+    </footer>
+
+    <dialog id="details" class="details">
+        <button
+            class="dialog-close"
+            id="closeDetails"
+            aria-label="Закрити"
+        >×</button>
+
+        <div id="detailsContent"></div>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
